@@ -6,27 +6,11 @@
 </script>
 
 <script>
-  import { browser } from "$app/env";
-  import { webVitals } from "$lib/vitals";
-
   import "../app.css";
   import card from "$lib/twitter-card.jpg";
   import Card from "$lib/Card.svelte";
   import Footer from "$lib/Footer.svelte";
   import { page } from "$app/stores";
-
-  let analyticsId = import.meta.env.VERCEL_ANALYTICS_ID;
-
-  console.log("browser", browser);
-  console.log("analyticsId", analyticsId);
-
-  $: if (analyticsId) {
-    webVitals({
-      path: $page.url.pathname,
-      params: $page.params,
-      analyticsId
-    });
-  }
 
   /** @type {string} */
   export let city;
