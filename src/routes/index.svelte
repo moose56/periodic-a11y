@@ -1,16 +1,29 @@
 <script context="module">
-	import { dev } from "$app/env";
+  import { dev } from "$app/env";
 
-	export const hydrate = dev;
+  export const hydrate = dev;
   export const router = false;
 </script>
 
 <script>
+  import { browser } from "$app/env";
+  import { webVitals } from "$lib/vitals";
+
   import "../app.css";
   import card from "$lib/twitter-card.jpg";
   import Card from "$lib/Card.svelte";
   import Footer from "$lib/Footer.svelte";
   import { page } from "$app/stores";
+
+  let analyticsId = import.meta.env.VERCEL_ANALYTICS_ID;
+
+  $: if (browser && analyticsId) {
+    webVitals({
+      path: $page.url.pathname,
+      params: $page.params,
+      analyticsId
+    });
+  }
 
   /** @type {string} */
   export let city;
