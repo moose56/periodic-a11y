@@ -80,26 +80,7 @@
 
     @media (max-width: 1024px) {
         ol {
-            grid-template-columns: repeat(2, minmax(20px, 1fr)) 1rem repeat(16, minmax(20px, 1fr));
-            grid-template-rows: repeat(7, minmax(20px, 1fr)) 5px repeat(2, minmax(20px, 1fr));
-            grid-template-areas:
-              "h   s1  s2  s3  s3  s3  s3  s3  s3  s3  s3  s3  s3  s4  s4  s4  s4  s4  he"
-              "li  be  s2  s3  s3  s3  s3  s3  s3  s3  s3  s3  s3  b   c   n   o   f   ne"
-              "na  mg  s2  s3  s3  s3  s3  s3  s3  s3  s3  s3  s3  al  si  p   s   cl  ar"
-              "k   ca  s2  sc  ti  v   cr  mn  fe  co  ni  cu  zn  ga  ge  as  se  br  kr"
-              "rb  sr  s2  y   zr  nb  mo  tc  ru  rh  pd  ag  cd  in  sn  sb  te  i   xe"
-              "cs  ba  a1  lu  hf  ta  w   re  os  ir  pt  au  hg  tl  pb  bi  po  at  rn"
-              "fr  ra  a2  lr  rf  db  sg  bh  hs  mt  ds  rg  cn  nh  fl  mc  lv  ts  og"
-              "s5  s5  s5  s5  s5  s5  s5  s5  s5  s5  s5  s5  s5  s5  s5  s5  s5  s5  s5"
-              "s6  s6  a3  la  ce  pr  nd  pm  sm  eu  gd  tb  dy  ho  er  tm  yb  s7  s7"
-              "s6  s6  a4  ac  th  pa  u   np  pu  am  cm  bk  cf  es  fm  md  no  s7  s7";
-
             gap: 1px;
-        }
-
-        .heading {
-            visibility: hidden;
-            display: none;
         }
     }
 </style>

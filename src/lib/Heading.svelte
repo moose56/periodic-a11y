@@ -3,7 +3,7 @@
 </script>
 
 <div>
-  <span>{text}</span>
+  <span class="text-sm">{text}</span>
 </div>
 
 
