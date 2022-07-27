@@ -80,8 +80,6 @@
 
     @media (max-width: 1024px) {
         ol {
-            background: red;
-
             grid-template-columns: repeat(2, minmax(20px, 1fr)) 1rem repeat(16, minmax(20px, 1fr));
             grid-template-rows: repeat(7, minmax(20px, 1fr)) 5px repeat(2, minmax(20px, 1fr));
             grid-template-areas:
