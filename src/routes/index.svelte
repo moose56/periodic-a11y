@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-  <title>SvelteKit on the edge</title>
+  <title>Periodica11y</title>
 </svelte:head>
 
 <div>

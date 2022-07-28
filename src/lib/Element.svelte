@@ -39,7 +39,6 @@
         align-items: center;
 
         border-radius: 5px;
-        border: 1px solid #c7c7c7;
     }
 
     .symbol {
