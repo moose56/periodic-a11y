@@ -1,37 +1,55 @@
 <script>
   export let element;
+  let block = "";
 
-  function blockColor() {
-    // f-block
-    if ([9, 10].includes(element.ypos)) {
-      return "#9bff99"
-    }
 
-    // s-block
-    if (([1, 2].includes(element.xpos)) || (element.xpos === 18 && element.ypos === 1)) {
-      return "#ff9999"
-    }
+  function isFblock() {
+    return [9, 10].includes(element.ypos);
+  }
 
-    // d-block
-    if ( (element.xpos > 2 && element.xpos < 13) && (element.ypos > 2 && element.ypos < 13)) {
-      return "#99ccff";
-    }
+  function isSblock() {
+    return ([1, 2].includes(element.xpos)) || (element.xpos === 18 && element.ypos === 1);
+  }
 
-    // p-block
-    if ((element.xpos > 12) && (element.ypos > 1 && element.ypos < 8)) {
-      return "#fdff8c";
-    }
+  function isDblock() {
+    return (element.xpos > 2 && element.xpos < 13) && (element.ypos > 2 && element.ypos < 8);
+  }
+
+  function isPblock() {
+    return (element.xpos > 12) && (element.ypos > 1 && element.ypos < 8);
   }
 </script>
 
-<div class="element" style="background-color: {blockColor()}">
-  <span class="symbol sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl">{element.symbol}</span>
-</div>
+
+{#if isFblock()}
+  <div class="element">
+    <span class="symbol sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl">
+      {element.symbol}
+    </span>
+  </div>
+{:else if isSblock()}
+  <div class="element">
+    <span class="symbol sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl">
+      {element.symbol}
+    </span>
+  </div>
+{:else if isDblock()}
+  <div class="element bg-gradient-to-b from-blue-300 to-blue-500 border border-blue-400">
+    <span class="symbol sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl">
+      {element.symbol}
+    </span>
+  </div>
+{:else if isPblock()}
+  <div class="element">
+    <span class="symbol sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl">
+      {element.symbol}
+    </span>
+  </div>
+{/if}
+
 
 <style>
     .element {
-        background: #eeeeee;
-
         height: 100%;
 
         display: flex;

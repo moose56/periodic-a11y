@@ -18,9 +18,9 @@
     div {
         display: grid;
 
-        grid-template-rows: max-content 1fr;
         grid-template-columns: 1fr;
+        grid-template-rows: max-content 1fr;
 
-        height: 100vh;
+        height: 100%;
     }
 </style>

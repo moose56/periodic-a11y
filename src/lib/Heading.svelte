@@ -2,15 +2,13 @@
   export let text;
 </script>
 
-<div>
+<div class="bg-slate-200">
   <span class="text-sm">{text}</span>
 </div>
 
 
 <style>
     div {
-        background: #f6f6f6;
-
         height: 100%;
 
         display: flex;
